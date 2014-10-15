@@ -8,6 +8,8 @@ import com.buzzlist.models.Item;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,16 +31,29 @@ public class ItemAdapter extends ArrayAdapter<Item>
         if(row == null)
         {
             LayoutInflater inflater = LayoutInflater.from(getContext());
-            row = inflater.inflate(R.layout.row_item, parent, false);
+            row = inflater.inflate(R.layout.list_row_item, parent, false);
             
             item = getItem(position);
             
-            ImageView imageView = (ImageView)row.findViewById(R.id.itemImage);
-            TextView name = (TextView)row.findViewById(R.id.itemName);
-            TextView price = (TextView)row.findViewById(R.id.itemPrice);
+//            ImageView imageView = (ImageView)row.findViewById(R.id.itemImage);
+//            TextView name = (TextView)row.findViewById(R.id.itemName);
+//            TextView price = (TextView)row.findViewById(R.id.itemPrice);
             
-            name.setText(item.getName());
-            price.setText("" + item.getPrice());
+            ImageView imageView = (ImageView)row.findViewById(R.id.image_ad);
+            TextView name = (TextView)row.findViewById(R.id.list_item_title);
+            TextView description = (TextView) row.findViewById(R.id.list_item_description);
+            TextView price = (TextView)row.findViewById(R.id.image_item_text);
+            TextView date = (TextView)row.findViewById(R.id.image_date_text);
+
+            name.setText(item.getName().toUpperCase());
+            description.setText(item.getDescription());
+            price.setText("$" + item.getPrice());
+            date.setText(item.getCreated());
+            
+            if(position%2 == 0){
+            	description.setTextColor(Color.parseColor("#ffffff"));
+            	row.setBackgroundColor(Color.parseColor("#125C90"));
+            }
         }
 
         return row;

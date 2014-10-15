@@ -10,13 +10,35 @@ public class Item implements Serializable
 	private static final long serialVersionUID = 7805152687630550497L;
 
 	public Item(String name, double price, int itemID, int userID,
-			String description, String imagePath) {
+			String description, String imagePath, String created, String modified) {
 		this.name = name;
 		this.price = price;
 		this.itemID = itemID;
 		this.userID = userID;
 		this.description = description;
 		this.imagePath = imagePath;
+		this.created = created;
+		this.modified = modified;
+	}
+
+
+	public String getCreated() {
+		return created;
+	}
+
+
+	public void setCreated(String created) {
+		this.created = created;
+	}
+
+
+	public String getModified() {
+		return modified;
+	}
+
+
+	public void setModified(String modified) {
+		this.modified = modified;
 	}
 
 
@@ -26,7 +48,10 @@ public class Item implements Serializable
 	private int userID;
 	private String description;
 	private String imagePath;
-	
+	private String created;
+	private String modified;
+
+
 
 	public String getName() {
 		return name;
@@ -96,8 +121,10 @@ public class Item implements Serializable
 			double price = obj.getDouble("price");
 			String description = obj.getString("description");
 			String imagePath = obj.getString("image_path");
+			String createdDate = obj.getString("created_at");
+			String modifiedDate = obj.getString("modified_at");
 			
-			return new Item(name, price, itemID, userID, description, imagePath);
+			return new Item(name, price, itemID, userID, description, imagePath,createdDate, modifiedDate );
 		} 
 		catch (JSONException e) 
 		{

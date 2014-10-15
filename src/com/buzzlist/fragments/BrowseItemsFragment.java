@@ -40,12 +40,10 @@ public class BrowseItemsFragment extends Fragment {
 	{
 		final View view = inflater.inflate(R.layout.fragment_browse_items, parent, false);
 		
-		final Fragment current = this;
 		items = new ArrayList<Item>();
         listView = (ListView)view.findViewById(R.id.browse_list_view);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
-			@SuppressLint("NewApi") @Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				Item model = (Item) listView.getItemAtPosition(position);
@@ -58,8 +56,8 @@ public class BrowseItemsFragment extends Fragment {
 				
 				getFragmentManager().popBackStackImmediate();
 
-		    	getFragmentManager().beginTransaction().addToBackStack(null).detach(current)
-		    	.add(android.R.id.content, frag).commit();
+		    	getFragmentManager().beginTransaction().addToBackStack(null)
+		    	.replace(android.R.id.content, frag).commit();
 			}
         });
 		
@@ -94,7 +92,8 @@ public class BrowseItemsFragment extends Fragment {
 						items.add(Item.decodeJSON(arr.getJSONObject(count)));
 					}
 					
-					adapter = new ItemAdapter(getActivity(), R.layout.row_item, items);
+					
+					adapter = new ItemAdapter(getActivity(), R.layout.list_row_item, items);
 					listView.setAdapter(adapter);
 				}
 			} 
