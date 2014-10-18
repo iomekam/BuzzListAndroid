@@ -1,5 +1,8 @@
 package com.buzzlist.fragments;
 
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +22,8 @@ import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,6 +31,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
@@ -42,6 +49,7 @@ public class BrowseItemsFragment extends Fragment {
 		
 		items = new ArrayList<Item>();
         listView = (ListView)view.findViewById(R.id.browse_list_view);
+        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
 			public void onItemClick(AdapterView<?> parent, View view,
@@ -89,9 +97,9 @@ public class BrowseItemsFragment extends Fragment {
 				{	
 					for(int count = 0; count < arr.length(); count++)
 					{
-						items.add(Item.decodeJSON(arr.getJSONObject(count)));
+						Item item = Item.decodeJSON(arr.getJSONObject(count));
+						items.add(item);
 					}
-					
 					
 					adapter = new ItemAdapter(getActivity(), R.layout.list_row_item, items);
 					listView.setAdapter(adapter);

@@ -17,7 +17,7 @@ public class LoginActivity extends ActionBarActivity {
         setContentView(R.layout.activity_login);
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
-                    .add(R.id.login_container, new LoginFragment())
+                    .replace(R.id.login_container, new LoginFragment())
                     .commit();
         }
 	}

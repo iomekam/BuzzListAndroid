@@ -5,6 +5,8 @@ import java.io.Serializable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.graphics.Bitmap;
+
 public class Item implements Serializable
 {
 	private static final long serialVersionUID = 7805152687630550497L;
@@ -50,6 +52,7 @@ public class Item implements Serializable
 	private String imagePath;
 	private String created;
 	private String modified;
+	private Bitmap image;
 
 
 
@@ -110,6 +113,16 @@ public class Item implements Serializable
 
 	public void setImagePath(String imagePath) {
 		this.imagePath = imagePath;
+	}
+
+
+	public Bitmap getImage() {
+		return image;
+	}
+
+
+	public void setImage(Bitmap image) {
+		this.image = image;
 	}
 
 

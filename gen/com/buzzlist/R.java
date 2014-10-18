@@ -1250,8 +1250,8 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
-        public static final int activity_login=0x7f030018;
-        public static final int activity_tab_host=0x7f030019;
+        public static final int activity_browse_items=0x7f030018;
+        public static final int activity_login=0x7f030019;
         public static final int fragment_browse_items=0x7f03001a;
         public static final int fragment_login=0x7f03001b;
         public static final int item_info=0x7f03001c;
