@@ -2,20 +2,22 @@ package com.buzzlist.base;
 
 import com.buzzlist.R;
 
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class BuzzListFragmentActivity extends FragmentActivity 
+public class BuzzListFragmentActivity extends ActionBarActivity 
 {
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) 
     {
     	// Inflate the menu; this adds items to the action bar if it is present.
-    	getActionBar().setDisplayShowHomeEnabled(false);
-    	getActionBar().setDisplayShowTitleEnabled(false);
+		
+		getSupportActionBar().setDisplayShowHomeEnabled(false);
+		getSupportActionBar().setDisplayShowTitleEnabled(false);
         getMenuInflater().inflate(R.menu.task_menu, menu);
+        
         return true;
     }
 	
