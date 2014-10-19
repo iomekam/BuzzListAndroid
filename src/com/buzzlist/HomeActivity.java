@@ -1,5 +1,6 @@
 package com.buzzlist;
 
+import com.buzzlist.base.BuzzListFragmentActivity;
 import com.buzzlist.fragments.HomeViewPagerFragment;
 
 import android.os.Bundle;
@@ -10,7 +11,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 
-public class HomeActivity extends FragmentActivity {
+public class HomeActivity extends BuzzListFragmentActivity {
     /**
      * The number of pages (wizard steps) to show in this demo.
      */

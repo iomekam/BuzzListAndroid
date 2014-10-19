@@ -23,5 +23,8 @@
         <string name="home_welcome">Welcome to BuzzList! Buzzlist is a comunity set up to help students exchange items in a similar fashion as craigs list.</string>
 	<string name="recent_title">Recent Items</string>
     
+    <string name="menu_search">Search postings</string>
+    <string name="menu_add">Add an item</string>
+    <string name="menu_profile">View profile</string>
 
 </resources>

@@ -1,6 +1,10 @@
 package com.buzzlist;
 
 import com.buzzlist.fragments.LoginFragment;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,9 +21,22 @@ public class LoginActivity extends ActionBarActivity {
         setContentView(R.layout.activity_login);
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
-                    .add(R.id.login_container, new LoginFragment())
+                    .replace(R.id.login_container, new LoginFragment())
                     .commit();
         }
+        
+        DisplayImageOptions options = new DisplayImageOptions.Builder()
+        .showImageOnLoading(R.drawable.generic_item)
+        .showImageForEmptyUri(R.drawable.generic_item)
+        .cacheInMemory(true)
+        .cacheOnDisk(true)
+        .build();
+        
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
+        	.defaultDisplayImageOptions(options)
+        	.build();
+        
+        ImageLoader.getInstance().init(config);
 	}
 
 	@Override

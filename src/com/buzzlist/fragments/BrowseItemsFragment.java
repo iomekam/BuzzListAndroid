@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.buzzlist.ItemInformationActivity;
 import com.buzzlist.R;
 import com.buzzlist.adapter.ItemAdapter;
 import com.buzzlist.globals.JsonFields;
@@ -15,13 +16,10 @@ import com.buzzlist.http.HttpManager;
 import com.buzzlist.http.HttpManager.Request;
 import com.buzzlist.models.Item;
 
-import android.annotation.SuppressLint;
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,22 +40,16 @@ public class BrowseItemsFragment extends Fragment {
 		
 		items = new ArrayList<Item>();
         listView = (ListView)view.findViewById(R.id.browse_list_view);
+        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				Item model = (Item) listView.getItemAtPosition(position);
 				
-				Bundle args = new Bundle();
-				args.putSerializable(getResources().getString(R.string.bundle_item_model), model);
-				
-				ItemInformationFragment frag = new ItemInformationFragment ();
-				frag.setArguments(args);
-				
-				getFragmentManager().popBackStackImmediate();
-
-		    	getFragmentManager().beginTransaction().addToBackStack(null)
-		    	.replace(android.R.id.content, frag).commit();
+				Intent intent = new Intent(getActivity(), ItemInformationActivity.class);
+				intent.putExtra(getResources().getString(R.string.bundle_item_model), model);
+				startActivity(intent);
 			}
         });
 		
@@ -89,9 +81,9 @@ public class BrowseItemsFragment extends Fragment {
 				{	
 					for(int count = 0; count < arr.length(); count++)
 					{
-						items.add(Item.decodeJSON(arr.getJSONObject(count)));
+						Item item = Item.decodeJSON(arr.getJSONObject(count));
+						items.add(item);
 					}
-						
 					
 					adapter = new ItemAdapter(getActivity(), R.layout.list_row_item, items);
 					listView.setAdapter(adapter);

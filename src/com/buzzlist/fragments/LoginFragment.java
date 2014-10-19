@@ -20,8 +20,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.buzzlist.HomeActivity;
+import com.buzzlist.BrowseItemsActivity;
 import com.buzzlist.R;
-import com.buzzlist.TabHostActivity;
 import com.buzzlist.globals.Authentication;
 import com.buzzlist.globals.JsonFields;
 import com.buzzlist.globals.JsonPostFields;

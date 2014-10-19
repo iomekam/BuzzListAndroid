@@ -17,6 +17,7 @@ import com.buzzlist.globals.Routing;
 import com.buzzlist.http.HttpManager;
 import com.buzzlist.http.HttpManager.Request;
 import com.buzzlist.models.Item;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import android.support.v4.app.Fragment;
 import android.graphics.Bitmap;
@@ -105,39 +106,16 @@ public class HomeViewPagerFragment extends Fragment {
 				{	
 					for(int count = 0; count < arr.length(); count++)
 					{
-						items.add(Item.decodeJSON(arr.getJSONObject(count)));
-						Log.e("JSON ITEM: " + count, arr.getJSONObject(count).toString());
+						Item item = Item.decodeJSON(arr.getJSONObject(count));
+						ImageLoader.getInstance().displayImage(item.getImagePath(), bigtile);
 					}
-					Log.e("Test Url",items.get(0).getImagePath()) ;
-					bigtile.setImageBitmap(getBitmapFromURL(items.get(0).getImagePath()));
+					
+					
+					
 				}
 			} 
 			catch (JSONException e) {}
 		}
-	}
-	private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
-	    ImageView bmImage;
-
-	    public DownloadImageTask(ImageView bmImage) {
-	        this.bmImage = bmImage;
-	    }
-
-	    protected Bitmap doInBackground(String... urls) {
-	        String urldisplay = urls[0];
-	        Bitmap mIcon11 = null;
-	        try {
-	            InputStream in = new java.net.URL(urldisplay).openStream();
-	            mIcon11 = BitmapFactory.decodeStream(in);
-	        } catch (Exception e) {
-	            Log.e("Error", e.getMessage());
-	            e.printStackTrace();
-	        }
-	        return mIcon11;
-	    }
-
-	    protected void onPostExecute(Bitmap result) {
-	        bmImage.setImageBitmap(result);
-	    }
 	}
 	
 }

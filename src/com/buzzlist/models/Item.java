@@ -51,8 +51,6 @@ public class Item implements Serializable
 	private String created;
 	private String modified;
 
-
-
 	public String getName() {
 		return name;
 	}
@@ -111,7 +109,6 @@ public class Item implements Serializable
 	public void setImagePath(String imagePath) {
 		this.imagePath = imagePath;
 	}
-
 
 	public static Item decodeJSON(JSONObject obj) {
 		try {		
