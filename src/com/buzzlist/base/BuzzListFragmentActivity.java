@@ -76,7 +76,7 @@ public class BuzzListFragmentActivity extends ActionBarActivity
 
 	    // If the PopupWindow should be focusable
 	    popupWindow.setFocusable(true);
-
+	    
 	    // If you need the PopupWindow to dismiss when when touched outside 
 	    popupWindow.setBackgroundDrawable(new ColorDrawable());
 	    popupWindow.setOnDismissListener(new OnDismissListener()
