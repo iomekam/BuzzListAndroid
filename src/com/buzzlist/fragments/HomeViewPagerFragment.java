@@ -35,7 +35,7 @@ public class HomeViewPagerFragment extends Fragment {
 	
 	 private List<Item> items;
 	 private ItemAdapter adapter;
-	 private ImageView bigtile;
+	 private ImageView bigtile, leftTile, rightTop, rightBot;
 	 public static HomeViewPagerFragment newInstance(int index) {
 		 HomeViewPagerFragment f = new HomeViewPagerFragment();
 
@@ -56,6 +56,7 @@ public class HomeViewPagerFragment extends Fragment {
 	{
 		final View view = inflater.inflate(R.layout.home_pager_view, parent, false);
 		bigtile = (ImageView) view.findViewById(R.id.big_tile);
+		leftTile = (ImageView) view.findViewById(R.id.big_tile);
 		
 		items = new ArrayList<Item>();
 		final String url = Routing.SERVER_URL + Routing.ITEM;

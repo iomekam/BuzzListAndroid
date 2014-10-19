@@ -59,7 +59,7 @@ public class ItemAdapter extends ArrayAdapter<Item>
         holder.name.setText(item.getName().toUpperCase(Locale.getDefault()));
         holder.description.setText(item.getDescription());
         holder.price.setText("$" + item.getPrice());
-        holder.date.setText(item.getCreated());
+        holder.date.setText(item.getCreatedAt().toString());
 
         return convertView;
     }
