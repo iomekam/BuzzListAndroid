@@ -1251,13 +1251,14 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_browse_items=0x7f030018;
-        public static final int activity_login=0x7f030019;
-        public static final int fragment_browse_items=0x7f03001a;
-        public static final int fragment_login=0x7f03001b;
-        public static final int item_info=0x7f03001c;
-        public static final int list_row_item=0x7f03001d;
-        public static final int row_item=0x7f03001e;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001f;
+        public static final int activity_item_information=0x7f030019;
+        public static final int activity_login=0x7f03001a;
+        public static final int fragment_browse_items=0x7f03001b;
+        public static final int fragment_login=0x7f03001c;
+        public static final int item_info=0x7f03001d;
+        public static final int list_row_item=0x7f03001e;
+        public static final int row_item=0x7f03001f;
+        public static final int support_simple_spinner_dropdown_item=0x7f030020;
     }
     public static final class menu {
         public static final int browse_items=0x7f0c0000;

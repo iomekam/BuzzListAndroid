@@ -26,11 +26,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TabHostActivity" >
-        </activity>
         <activity
             android:name=".BrowseItemsActivity"
             android:label="@string/title_activity_browse_items" >
+        </activity>
+        <activity
+            android:name=".ItemInformationActivity">
         </activity>
     </application>
 
