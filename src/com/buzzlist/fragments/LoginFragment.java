@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.buzzlist.HomeActivity;
 import com.buzzlist.R;
 import com.buzzlist.TabHostActivity;
 import com.buzzlist.globals.Authentication;
@@ -91,7 +92,7 @@ public class LoginFragment extends Fragment
 				{
 					Authentication.apiKey = obj.getString(JsonFields.Login.API_KEY);
 					
-					Intent intent = new Intent(getActivity(), TabHostActivity.class);
+					Intent intent = new Intent(getActivity(), HomeActivity.class);
 					startActivity(intent);
 				}
 				else

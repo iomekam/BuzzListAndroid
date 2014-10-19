@@ -29,7 +29,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-public class BrowseItemsFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
 	private ListView listView;
 	private List<Item> items;

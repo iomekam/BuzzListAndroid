@@ -1,15 +1,13 @@
 package com.buzzlist.adapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.buzzlist.R;
 import com.buzzlist.models.Item;
 
-import android.app.Activity;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +21,8 @@ public class ItemAdapter extends ArrayAdapter<Item>
         super(context, layoutResourceId, data);
     }
 
-    @Override
+    @SuppressLint("DefaultLocale")
+	@Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
         Item item = null;
@@ -34,10 +33,6 @@ public class ItemAdapter extends ArrayAdapter<Item>
             row = inflater.inflate(R.layout.list_row_item, parent, false);
             
             item = getItem(position);
-            
-//            ImageView imageView = (ImageView)row.findViewById(R.id.itemImage);
-//            TextView name = (TextView)row.findViewById(R.id.itemName);
-//            TextView price = (TextView)row.findViewById(R.id.itemPrice);
             
             ImageView imageView = (ImageView)row.findViewById(R.id.image_ad);
             TextView name = (TextView)row.findViewById(R.id.list_item_title);

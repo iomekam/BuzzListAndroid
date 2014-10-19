@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    <android.support.v4.view.ViewPager
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="175.0dip" />
+    
+    
+    <RelativeLayout 
+        android:id="@+id/image_content"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignBottom="@+id/pager"
+        android:layout_alignLeft="@+id/pager"
+        >
+        
+    <TextView 
+        android:id="@+id/view_pager_text_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#80000000"/>
+    
+    <TextView 
+        android:id="@+id/view_pager_text_shadow_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="page_numbers"
+        android:textColor="#ffffff"/>
+        
+        </RelativeLayout>
+        </RelativeLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button 
+            android:id="@+id/message_button"
+            android:text="Message User"
+            android:layout_width="0dip"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:textColor="#00263a"
+            android:background="#E0AA0F"/>
+        <Button 
+            android:id="@+id/favorite_button"
+            android:text="Favorite Item"
+            android:layout_width="0dip"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="#FF0000"/>
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView 
+            android:id="@+id/item_title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingLeft="3dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Item Title"
+            />
+        
+        <TextView
+            android:id="@+id/date_posted"
+            android:layout_below="@+id/item_title"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_alignLeft="@+id/item_title"
+            android:paddingTop="3dp"
+            android:paddingLeft="3dp"
+            android:text="data"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#80000000"/>
+        
+        <TextView
+            android:id="@+id/item_price"
+            android:layout_width = "wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/date_posted"
+            android:paddingRight="5dp"
+            android:text = "$1000"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ff0000"
+            android:textStyle="bold"/>
+        
+        <TextView
+            android:id="@+id/obo"
+            android:layout_width = "wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/item_price"
+            android:paddingRight="5dp"
+            android:text = "OBO"
+            android:textColor="#ffffff"
+            android:background="#000000"
+            android:textStyle="bold"/>
+
+        <TextView 
+            android:id="@+id/description_title"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft ="true"
+            android:layout_below="@+id/obo"
+            android:paddingTop="10dp"
+            android:text="Description"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:paddingLeft="3dp"
+            />
+        
+        <TextView
+            android:id="@+id/description_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/description_title"
+            android:paddingLeft="3dp"
+            android:paddingRight = "3dp"
+            android:layout_width = "match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="Content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#80000000"
+            />
+        
+        <TextView 
+            android:id="@+id/item_tags"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft ="true"
+            android:layout_below="@+id/description_content"
+            android:paddingTop="10dp"
+            android:text="Item Tags"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:paddingLeft="3dp"
+            
+            />
+        
+        <LinearLayout 
+            android:id="@+id/tags_lister"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:orientation = "horizontal"
+            android:layout_below="@+id/item_tags">
+            
+            
+            <TextView
+            android:id="@+id/tags_list"
+            android:layout_width = "wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#80000000"
+            />
+            </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+
+    
+
+</ScrollView>
