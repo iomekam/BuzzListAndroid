@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Search, should appear as action button -->
+     <item android:id="@+id/action_add"
+          android:icon="@android:drawable/ic_menu_add"
+          android:title="h"
+          android:showAsAction="always" />
+    <item android:id="@+id/action_profile"
+          android:icon="@android:drawable/ic_menu_info_details"
+          android:title="h"
+          android:showAsAction="always" />
+    <item android:id="@+id/action_search"
+          android:icon="@android:drawable/ic_menu_search"
+          android:title="h"
+          android:showAsAction="always" />
+</menu>

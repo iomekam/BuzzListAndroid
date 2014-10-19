@@ -1,16 +1,14 @@
 package com.buzzlist.adapter;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import com.buzzlist.R;
 import com.buzzlist.models.Item;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,7 +56,7 @@ public class ItemAdapter extends ArrayAdapter<Item>
         item = getItem(position);
    
         ImageLoader.getInstance().displayImage(item.getImagePath(), holder.imageView);
-        holder.name.setText(item.getName().toUpperCase());
+        holder.name.setText(item.getName().toUpperCase(Locale.getDefault()));
         holder.description.setText(item.getDescription());
         holder.price.setText("$" + item.getPrice());
         holder.date.setText(item.getCreated());

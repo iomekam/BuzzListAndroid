@@ -1,18 +1,11 @@
 package com.buzzlist;
 
+import com.buzzlist.base.BuzzListFragmentActivity;
 import com.buzzlist.fragments.ItemInformationFragment;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.view.Menu;
 
-public class ItemInformationActivity extends FragmentActivity
+public class ItemInformationActivity extends BuzzListFragmentActivity
 {
-	@Override
-    public boolean onCreateOptionsMenu(Menu menu) 
-    {
-        return true;
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

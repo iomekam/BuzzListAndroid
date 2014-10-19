@@ -27,8 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BrowseItemsActivity"
-            android:label="@string/title_activity_browse_items" >
+            android:name=".BrowseItemsActivity">
         </activity>
         <activity
             android:name=".ItemInformationActivity">

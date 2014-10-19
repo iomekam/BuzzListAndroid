@@ -1114,6 +1114,7 @@ containing a value of this type.
         public static final int tab_unselected_pressed_buzzlist=0x7f020079;
     }
     public static final class id {
+        public static final int action_add=0x7f050055;
         public static final int action_bar=0x7f05001c;
         public static final int action_bar_activity_content=0x7f050015;
         public static final int action_bar_container=0x7f05001b;
@@ -1125,6 +1126,8 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
+        public static final int action_profile=0x7f050056;
+        public static final int action_search=0x7f050057;
         public static final int action_settings=0x7f050054;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
@@ -1263,6 +1266,7 @@ containing a value of this type.
     public static final class menu {
         public static final int browse_items=0x7f0c0000;
         public static final int login=0x7f0c0001;
+        public static final int task_menu=0x7f0c0002;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 

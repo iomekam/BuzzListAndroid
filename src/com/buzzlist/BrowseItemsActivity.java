@@ -1,24 +1,14 @@
 package com.buzzlist;
 
+import com.buzzlist.base.BuzzListFragmentActivity;
 import com.buzzlist.fragments.BrowseItemsFragment;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.view.Menu;
 
-public class BrowseItemsActivity extends FragmentActivity {
-		   
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) 
-    {
-    	getActionBar().setDisplayShowHomeEnabled(false);              
-        getActionBar().setDisplayShowTitleEnabled(false);
-
-        return true;
-    }
+public class BrowseItemsActivity extends BuzzListFragmentActivity {   
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
