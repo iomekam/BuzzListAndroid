@@ -31,6 +31,10 @@
             android:name=".BrowseItemsActivity"
             android:label="@string/title_activity_browse_items" >
         </activity>
+                <activity
+            android:name=".HomeActivity"
+            android:label="Home" >
+        </activity>
     </application>
 
 </manifest>
