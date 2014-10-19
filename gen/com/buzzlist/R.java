@@ -1319,6 +1319,9 @@ containing a value of this type.
         public static final int login_password=0x7f0a0012;
         public static final int login_username=0x7f0a0011;
         public static final int login_welcome=0x7f0a0014;
+        public static final int menu_add=0x7f0a0021;
+        public static final int menu_profile=0x7f0a0022;
+        public static final int menu_search=0x7f0a0020;
         public static final int missing_fields=0x7f0a0018;
         public static final int no_internet=0x7f0a0016;
         public static final int password_mismatch=0x7f0a0017;

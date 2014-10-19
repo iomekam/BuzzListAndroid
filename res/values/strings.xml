@@ -20,5 +20,8 @@
     <string name="tab_three">Tab 3</string>
     <string name="title_activity_browse_items">BrowseItemsActivity</string>
     <string name="bundle_item_model">item_model</string>
+    <string name="menu_search">Search postings</string>
+    <string name="menu_add">Add an item</string>
+    <string name="menu_profile">View profile</string>
 
 </resources>
