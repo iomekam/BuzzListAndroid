@@ -110,9 +110,6 @@ public class HomeViewPagerFragment extends Fragment {
 						Item item = Item.decodeJSON(arr.getJSONObject(count));
 						ImageLoader.getInstance().displayImage(item.getImagePath(), bigtile);
 					}
-					
-					
-					
 				}
 			} 
 			catch (JSONException e) {}

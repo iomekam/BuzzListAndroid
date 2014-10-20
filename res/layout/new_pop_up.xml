@@ -3,148 +3,169 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#80000000" >
-    
-    <LinearLayout 
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:weightSum="1">
-        <TextView android:layout_width="0dip"
+        android:weightSum="1" >
+
+        <TextView
+            android:layout_width="0dip"
             android:layout_height="wrap_content"
-            android:layout_weight=".1"/>
-        <RelativeLayout android:layout_width="0dip"
+            android:layout_weight=".1" />
+
+        <RelativeLayout
+            android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight=".8"
-            android:background="@drawable/backround_grey">
+            android:background="@drawable/backround_grey" >
+
             <TextView
                 android:id="@+id/search_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:paddingLeft="3dp"
                 android:text="Search Items"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"/>"
-            <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
                 android:background="@null"
-                android:text="X"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:paddingRight="3dp"/>
-            <LinearLayout android:layout_width="match_parent"
+                android:paddingRight="3dp"
+                android:drawableStart="@android:drawable/ic_menu_close_clear_cancel"/>"
+
+            <LinearLayout
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_below="@+id/search_title"
-                android:id="@+id/search_bar">"
-                
-                
+                android:orientation="horizontal" >
+
                 <EditText
-        android:id="@+id/editText1"
-        android:layout_width="0dip"
-        android:layout_weight=".8"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPostalAddress"
-        android:text="Search"
-         />
+                    android:id="@+id/editText1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:ems="10"
+                    android:inputType="textPostalAddress"
+                    android:hint="Search" />
 
-              
-
-         <Button
-             android:id="@+id/go_button"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Go"
-         />
+                <Button
+                    android:id="@+id/go_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@android:drawable/ic_menu_search"
+                    android:background="@null" 
+                    android:layout_marginLeft="-5dip"/>
             </LinearLayout>
-         
-          <LinearLayout
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:weightSum="1"
-             android:layout_below="@+id/search_bar"
-             android:paddingTop="3dp"
-             android:paddingBottom="10dp"
-             android:id="@+id/lol"
-             android:orientation="horizontal"
-             >
-             <CheckBox
+
+            <LinearLayout
+                android:id="@+id/lol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_bar"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="3dp"
+                android:weightSum="1" >
+
+                <CheckBox
                     android:id="@+id/checkBox1"
                     android:layout_width="0dip"
                     android:layout_height="wrap_content"
-                    android:text="By Tag"
-                    android:layout_weight=".4"/>
-         <CheckBox
+                    android:layout_weight=".4"
+                    android:text="By Tag" />
+
+                <CheckBox
                     android:id="@+id/checkBox2"
                     android:layout_width="0dip"
                     android:layout_height="wrap_content"
                     android:layout_weight=".6"
-                    android:text="Has Image"/>
-         
-         
-         </LinearLayout>  
+                    android:text="Has Image" />
+            </LinearLayout>
+
             <CheckBox
-                    android:id="@+id/checkBox3"
-                    android:layout_below="@+id/lol"
-                    android:layout_width="wrap_content"
+                android:id="@+id/checkBox4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lol"
+                android:layout_centerHorizontal="true"
+                android:text="Search by Title?" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkBox4"
+                android:layout_centerHorizontal="true"
+                android:text="Accepts Best Offer" />
+
+            <TextView
+                android:id="@+id/sort_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkBox3"
+                android:layout_centerVertical="true"
+                android:paddingLeft="3dp"
+                android:paddingTop="5dp"
+                android:text="Sort By"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <LinearLayout
+                android:id="@+id/pop_up_sort_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sort_title"
+                android:paddingBottom="10dp"
+                android:paddingTop="3dp"
+                android:weightSum="1" >
+
+                <Button
+                    android:id="@+id/recent"
+                    android:layout_width="0dip"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:text="Accepts Best Offer"/>
-            
-            
-         
-         
-         <TextView
-             android:id="@+id/sort_title"
-             android:paddingLeft="3dp"
-             android:layout_height="wrap_content"
-             android:layout_width="wrap_content"
-             android:textAppearance="?android:attr/textAppearanceLarge"
-             android:paddingTop="5dp"
-             android:layout_centerVertical="true"
-             android:layout_below="@+id/checkBox3"
-             android:text="Sort By"
-             />
-         
-         <LinearLayout
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:weightSum="1"
-             android:layout_below="@+id/sort_title"
-             android:paddingTop="3dp"
-             android:paddingBottom="10dp"
-             >
-             <Button
-                 android:id="@+id/recent"
-                 android:layout_width="0dip"
-                 android:layout_height="wrap_content"
-                 android:layout_weight=".33"
-                 android:text="Recent"
-                 android:background="@null"
-                 />
-             <Button
-                 android:id="@+id/inc_price"
-                 android:layout_width="0dip"
-                 android:layout_height="wrap_content"
-                 android:layout_weight=".33"
-                 android:text="Price ↑"
-                 android:background="@null"/>
-             <Button
-                 android:id="@+id/dec_price"
-                 android:layout_width="0dip"
-                 android:layout_height="wrap_content"
-                 android:layout_weight=".33"
-                 android:text="Price ↓"
-                 android:background="@null"/>
-         </LinearLayout>"
-            "
+                    android:layout_weight=".33"
+                    android:background="#8FD8D8"
+                    android:text="Recent" />
+
+                <Button
+                    android:id="@+id/inc_price"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".33"
+                    android:background="@null"
+                    android:text="Price ↑" />
+
+                <Button
+                    android:id="@+id/dec_price"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".33"
+                    android:background="@null"
+                    android:text="Price ↓" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pop_up_categories_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/pop_up_sort_layout" >
+
+                <Button
+                    android:id="@+id/pop_up_categories_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Category" />
+            </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
-    
-   
-    
-
 </RelativeLayout>

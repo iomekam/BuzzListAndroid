@@ -1,6 +1,7 @@
 package com.buzzlist.fragments;
 
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,7 @@ public class SettingsFragment extends Fragment {
 	private CheckBox obo, hImage, bTag;
 	private EditText search;
 	private Button searchGo, incPrice, decPrice, recent;
+	private int currButton = 0;
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent,
 			Bundle savedInstanceState) {
@@ -34,23 +36,6 @@ public class SettingsFragment extends Fragment {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-
-			}
-		});
-		incPrice.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-
-			}
-		});
-		decPrice.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
 
 			}
 		});
@@ -58,10 +43,54 @@ public class SettingsFragment extends Fragment {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				if(currButton!=0){
+					if(currButton == 1){
+						recent.setBackgroundColor(Color.parseColor("#8FD8D8"));
+						incPrice.setBackgroundColor(Color.parseColor("#ffffff"));
+					}
+					else if(currButton == 2){
+						recent.setBackgroundColor(Color.parseColor("#8FD8D8"));
+						decPrice.setBackgroundColor(Color.parseColor("#ffffff"));
+					}
+				}
 
 			}
 		});
+		incPrice.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				if(currButton!=1){
+					if(currButton == 0){
+						incPrice.setBackgroundColor(Color.parseColor("#8FD8D8"));
+						recent.setBackgroundColor(Color.parseColor("#ffffff"));
+					}
+					else if(currButton == 2){
+						incPrice.setBackgroundColor(Color.parseColor("#8FD8D8"));
+						decPrice.setBackgroundColor(Color.parseColor("#ffffff"));
+					}
+				}
+
+			}
+		});
+		decPrice.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				if(currButton!=2){
+					if(currButton == 0){
+						decPrice.setBackgroundColor(Color.parseColor("#8FD8D8"));
+						recent.setBackgroundColor(Color.parseColor("#ffffff"));
+					}
+					else if(currButton == 1){
+						decPrice.setBackgroundColor(Color.parseColor("#8FD8D8"));
+						incPrice.setBackgroundColor(Color.parseColor("#ffffff"));
+					}
+				}
+
+			}
+		});
+		
 
 		search = (EditText) view.findViewById(R.id.editText1);
 		obo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
