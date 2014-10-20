@@ -8,6 +8,7 @@ import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.util.EntityUtils;
 
 import com.buzzlist.globals.Authentication;
@@ -39,6 +40,12 @@ public class HttpManager
 		
 		if(type == Request.GET)
 		{
+			if(params != null)
+			{
+				 String paramString = URLEncodedUtils.format(params, "utf-8");
+				 uri = uri + "?" + paramString;
+			}
+			
 			getRequest = new HttpGet(uri);
 			getRequest.setHeader(Routing.AUTHORIZATION, Authentication.apiKey);
 		}

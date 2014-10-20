@@ -15,10 +15,15 @@ public class BrowseItemsActivity extends BuzzListFragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browse_items); 
         
+        BrowseItemsFragment frag = new BrowseItemsFragment();
+    	frag.setArguments(getIntent().getExtras());
+        
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
-                    .replace(android.R.id.content, new BrowseItemsFragment())
+                    .replace(android.R.id.content, frag)
                     .commit();
         }
+        
+        
     }
 }

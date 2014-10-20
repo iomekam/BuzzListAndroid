@@ -464,6 +464,7 @@ int string abc_shareactionprovider_share_with 0x7f0a000c
 int string abc_shareactionprovider_share_with_application 0x7f0a000b
 int string action_settings 0x7f0a000f
 int string app_name 0x7f0a000d
+int string browse_items_params 0x7f0a0022
 int string bundle_item_model 0x7f0a001f
 int string hello_world 0x7f0a000e
 int string home_welcome 0x7f0a0020
@@ -473,9 +474,9 @@ int string login_image_description 0x7f0a0015
 int string login_password 0x7f0a0012
 int string login_username 0x7f0a0011
 int string login_welcome 0x7f0a0014
-int string menu_add 0x7f0a0023
-int string menu_profile 0x7f0a0024
-int string menu_search 0x7f0a0022
+int string menu_add 0x7f0a0024
+int string menu_profile 0x7f0a0025
+int string menu_search 0x7f0a0023
 int string missing_fields 0x7f0a0018
 int string no_internet 0x7f0a0016
 int string password_mismatch 0x7f0a0017

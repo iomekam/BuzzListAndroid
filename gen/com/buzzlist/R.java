@@ -1366,6 +1366,7 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int action_settings=0x7f0a000f;
         public static final int app_name=0x7f0a000d;
+        public static final int browse_items_params=0x7f0a0022;
         public static final int bundle_item_model=0x7f0a001f;
         public static final int hello_world=0x7f0a000e;
         public static final int home_welcome=0x7f0a0020;
@@ -1375,9 +1376,9 @@ containing a value of this type.
         public static final int login_password=0x7f0a0012;
         public static final int login_username=0x7f0a0011;
         public static final int login_welcome=0x7f0a0014;
-        public static final int menu_add=0x7f0a0023;
-        public static final int menu_profile=0x7f0a0024;
-        public static final int menu_search=0x7f0a0022;
+        public static final int menu_add=0x7f0a0024;
+        public static final int menu_profile=0x7f0a0025;
+        public static final int menu_search=0x7f0a0023;
         public static final int missing_fields=0x7f0a0018;
         public static final int no_internet=0x7f0a0016;
         public static final int password_mismatch=0x7f0a0017;

@@ -3,8 +3,8 @@ package com.buzzlist.models;
 import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 
@@ -15,7 +15,7 @@ import org.json.JSONObject;
 public class Item implements Serializable
 {
 	public Item(String name, double price, int itemID, int userID,
-			String description, String imagePath,
+			String description, String imagePath, boolean hasImage, boolean hasBestOffer,
 			int categoryID, Date createdAt, Date modifiedAt, List<Tag> tagList) {
 		super();
 		this.name = name;
@@ -24,34 +24,17 @@ public class Item implements Serializable
 		this.userID = userID;
 		this.description = description;
 		this.imagePath = imagePath;
+		this.hasImage = hasImage;
+		this.hasBestOffer = hasBestOffer;
 		this.categoryID = categoryID;
 		this.createdAt = createdAt;
 		this.modifiedAt = modifiedAt;
+		
+		this.tagList = tagList;
 	}
 
 
 	private static final long serialVersionUID = 7805152687630550497L;
-
-	public Date getCreatedAt() {
-		return createdAt;
-	}
-
-
-	public void setCreatedAt(Date created) {
-		this.createdAt = created;
-	}
-
-
-	public Date getModified() {
-		return modifiedAt;
-	}
-
-
-	public void setModified(Date modified) {
-		this.modifiedAt = modified;
-	}
-
-
 	private String name;
 	private double price;
 	private int itemID;
@@ -60,108 +43,66 @@ public class Item implements Serializable
 	private String imagePath;
 	private int categoryID;
 	private Date createdAt;
-	private Date modifiedAt;
-	
-	List<Tag> tagList;
+	private Date modifiedAt;	
+	private List<Tag> tagList;
+	private boolean hasImage;
+	private boolean hasBestOffer;
 
 	public String getName() {
 		return name;
 	}
 
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-
 	public double getPrice() {
 		return price;
 	}
-
-
-	public void setPrice(float price) {
-		this.price = price;
-	}
-
 
 	public int getItemID() {
 		return itemID;
 	}
 
-
-	public void setItemID(int itemID) {
-		this.itemID = itemID;
-	}
-
-
 	public int getUserID() {
 		return userID;
 	}
 
-
-	public void setUserID(int userID) {
-		this.userID = userID;
-	}
-
-
 	public String getDescription() {
 		return description;
 	}
-
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	
 	
 	public String getImagePath() {
 		return imagePath;
-	}
-
-
-	public void setImagePath(String imagePath) {
-		this.imagePath = imagePath;
 	}
 
 	public int getCategoryID() {
 		return categoryID;
 	}
 
-
-	public void setCategoryID(int categoryID) {
-		this.categoryID = categoryID;
-	}
-
-
 	public Date getModifiedAt() {
 		return modifiedAt;
 	}
-
-
-	public void setModifiedAt(Date modifiedAt) {
-		this.modifiedAt = modifiedAt;
+	
+	public Date getCreatedAt() {
+		return createdAt;
 	}
 
+	public Date getModified() {
+		return modifiedAt;
+	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-
 	public List<Tag> getTagList() {
 		return tagList;
 	}
-
-
-	public void setTagList(List<Tag> tagList) {
-		this.tagList = tagList;
+	
+	public boolean isHasImage() {
+		return hasImage;
 	}
 
+	public boolean isHasBestOffer() {
+		return hasBestOffer;
+	}
 
 	public static Item decodeJSON(JSONObject obj) {
 		try {		
@@ -174,10 +115,12 @@ public class Item implements Serializable
 			int categoryID = obj.getInt("category_id");
 			String createdDate = obj.getString("created_at");
 			String modifiedDate = obj.getString("modified_at");
+			boolean hasImage = obj.getBoolean("has_image");
+			boolean hasBestOffer = obj.getBoolean("accepts_best_offer");
 			
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
 			
-			List<Tag> tagList = new LinkedList<Tag>();
+			List<Tag> tagList = new ArrayList<Tag>();
 			
 			JSONArray arr = obj.getJSONArray("tags");
 			
@@ -187,7 +130,7 @@ public class Item implements Serializable
 				tagList.add(tag);
 			}
 			
-			return new Item(name, price, itemID, userID, description, imagePath, categoryID,
+			return new Item(name, price, itemID, userID, description, imagePath, hasImage, hasBestOffer, categoryID,
 					dateFormat.parse(createdDate), dateFormat.parse(modifiedDate), tagList );
 		} 
 		catch (JSONException e) 
