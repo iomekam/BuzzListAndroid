@@ -28,18 +28,18 @@ public class SettingsFragment extends Fragment {
 		hImage = (CheckBox) view.findViewById(R.id.checkBox2);
 
 		searchGo = (Button) view.findViewById(R.id.go_button);
-		incPrice = (Button) view.findViewById(R.id.go_button);
-		decPrice = (Button) view.findViewById(R.id.go_button);
-		recent = (Button) view.findViewById(R.id.go_button);
+		incPrice = (Button) view.findViewById(R.id.inc_price);
+		decPrice = (Button) view.findViewById(R.id.dec_price);
+		recent = (Button) view.findViewById(R.id.recent);
 
-		searchGo.setOnClickListener(new View.OnClickListener() {
+		searchGo.setOnClickListener(new Button.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 
 			}
 		});
-		recent.setOnClickListener(new View.OnClickListener() {
+		recent.setOnClickListener(new Button.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -52,11 +52,12 @@ public class SettingsFragment extends Fragment {
 						recent.setBackgroundColor(Color.parseColor("#8FD8D8"));
 						decPrice.setBackgroundColor(Color.parseColor("#ffffff"));
 					}
+					currButton = 0;
 				}
 
 			}
 		});
-		incPrice.setOnClickListener(new View.OnClickListener() {
+		incPrice.setOnClickListener(new Button.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -69,11 +70,12 @@ public class SettingsFragment extends Fragment {
 						incPrice.setBackgroundColor(Color.parseColor("#8FD8D8"));
 						decPrice.setBackgroundColor(Color.parseColor("#ffffff"));
 					}
+					currButton = 1;
 				}
 
 			}
 		});
-		decPrice.setOnClickListener(new View.OnClickListener() {
+		decPrice.setOnClickListener(new Button.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -86,6 +88,7 @@ public class SettingsFragment extends Fragment {
 						decPrice.setBackgroundColor(Color.parseColor("#8FD8D8"));
 						incPrice.setBackgroundColor(Color.parseColor("#ffffff"));
 					}
+					currButton = 2;
 				}
 
 			}

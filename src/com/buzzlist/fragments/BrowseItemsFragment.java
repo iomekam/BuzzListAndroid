@@ -3,6 +3,8 @@ package com.buzzlist.fragments;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,12 +16,14 @@ import com.buzzlist.globals.JsonFields;
 import com.buzzlist.globals.Routing;
 import com.buzzlist.http.HttpManager;
 import com.buzzlist.http.HttpManager.Request;
+import com.buzzlist.models.BuzzListNameValuePair;
 import com.buzzlist.models.Item;
 
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,13 +37,26 @@ public class BrowseItemsFragment extends Fragment {
 	private List<Item> items;
 	private ItemAdapter adapter;
 	
+	private List<NameValuePair> getParams;
+	
+	@SuppressWarnings("unchecked")
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent,
 			Bundle savedInstanceState) 
 	{
-		final View view = inflater.inflate(R.layout.fragment_browse_items, parent, false);
+		final View view = inflater.inflate(R.layout.fragment_browse_items, parent, false);	
 		
+		getParams = new ArrayList<NameValuePair>();
 		items = new ArrayList<Item>();
-        listView = (ListView)view.findViewById(R.id.browse_list_view);
+		
+		Bundle b = getArguments();
+		ArrayList<BuzzListNameValuePair> params = (ArrayList<BuzzListNameValuePair>)b.getSerializable(getResources().getString(R.string.browse_items_params));
+		
+        for(BuzzListNameValuePair pair: params)
+        {
+        	getParams.add(pair);
+        }
+		
+		listView = (ListView)view.findViewById(R.id.browse_list_view);
         listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -53,7 +70,7 @@ public class BrowseItemsFragment extends Fragment {
 			}
         });
 		
-		final String url = Routing.SERVER_URL + Routing.ITEM;
+		final String url = Routing.SERVER_URL + Routing.SEARCH;
 		
 		HttpTaskGet task = new HttpTaskGet();
 		task.execute(url);
@@ -61,11 +78,11 @@ public class BrowseItemsFragment extends Fragment {
 		return view;
 	}
 	
-	private class HttpTaskGet extends AsyncTask<String, String, String>
+	private class HttpTaskGet extends AsyncTask<Object, String, String>
 	{
 		@Override
-		protected String doInBackground(String... params) {
-			return HttpManager.getContent((String)params[0], Request.GET);
+		protected String doInBackground(Object... params) {
+			return HttpManager.getContent((String)params[0], Request.POST, getParams);
 		}	
 		
 		@Override
