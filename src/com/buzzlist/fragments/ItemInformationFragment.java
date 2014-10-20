@@ -1,20 +1,15 @@
 package com.buzzlist.fragments;
 
-import java.util.List;
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.buzzlist.R;
 import com.buzzlist.models.Item;
 import com.buzzlist.models.Tag;
-import com.nostra13.universalimageloader.core.ImageLoader;
 
 public class ItemInformationFragment extends Fragment
 {
