@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -41,66 +42,12 @@ public class LoginFragment extends Fragment
 		loginButton.setOnClickListener(new Button.OnClickListener() {
 	        public void onClick(View v) 
 	        {
-	        	final String url = Routing.SERVER_URL + Routing.LOGIN;
-	        	
-	        	if(Utilities.isOnline(getActivity()))
-	        	{
-	            	String username = ((EditText)view.findViewById(R.id.login_username)).getText().toString();
-	            	String password = ((EditText)view.findViewById(R.id.login_password)).getText().toString();
-	            	
-	            	if(username.isEmpty() || password.isEmpty())
-	            	{
-	            		Toast.makeText(getActivity(), R.string.missing_fields, Toast.LENGTH_LONG).show();
-	            	}
-	            	else
-	            	{
-		            	List<NameValuePair> params = new LinkedList<NameValuePair>();
-		            	params.add(new BasicNameValuePair(JsonPostFields.Login.USERNAME, username));
-		            	params.add(new BasicNameValuePair(JsonPostFields.Login.PASSWORD, password));
-		            	
-		            	HttpTaskPost task = new HttpTaskPost();
-		            	task.execute(url, params);
-	            	}
-	        	}
-	        	else
-	        	{
-	        		Toast.makeText(getActivity(), getResources().getString(R.string.no_internet), Toast.LENGTH_LONG).show();
-	        	}
+	            Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://dev.m.gatech.edu/login?url=buzzlist://loggedin&sessionTransfer=window"));
+	            myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+	            startActivity(myIntent);
 	        }	
 	    });
 		
 		return view;
-	}
-	
-	private class HttpTaskPost extends AsyncTask<Object, String, String>
-	{
-		@SuppressWarnings("unchecked")
-		@Override
-		protected String doInBackground(Object... params) {
-			return HttpManager.getContent((String)params[0], Request.POST, (List<NameValuePair>)params[1]);
-		}	
-		
-		@Override
-		protected void onPostExecute(String result) 
-		{
-			try {
-				JSONObject obj = new JSONObject(result);
-				
-				boolean error = obj.getBoolean(JsonFields.ERROR);
-				
-				if(!error)
-				{
-					Authentication.apiKey = obj.getString(JsonFields.Login.API_KEY);
-					
-					Intent intent = new Intent(getActivity(), HomeActivity.class);
-					startActivity(intent);
-				}
-				else
-				{
-					Toast.makeText(getActivity(), getResources().getString(R.string.invalid_credentials), Toast.LENGTH_LONG).show();
-				}
-			} 
-			catch (JSONException e) {}
-		}
 	}
 }

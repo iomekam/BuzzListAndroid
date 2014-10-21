@@ -27,37 +27,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:text="@string/login_welcome" />
-    <EditText
-        android:id="@+id/login_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/logo"
-        android:layout_alignRight="@+id/logo"
-        android:layout_below="@+id/login_welcome"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="30dp"
-        android:hint="@string/login_username"
-        android:ems="10" >
-        <requestFocus />
-    </EditText>
-    <EditText
-        android:id="@+id/login_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_username"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/login_username"
-        android:layout_alignRight="@+id/login_username"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="@string/login_password"
-        android:inputType="textPassword" />
+
     <Button
         android:id="@+id/login_button"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login_password"
+        android:layout_below="@+id/login_welcome"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:layout_marginTop="38dp"
         android:text="@string/login_button_text" />
+
 </RelativeLayout>
