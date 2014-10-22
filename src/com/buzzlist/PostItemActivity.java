@@ -2,6 +2,7 @@ package com.buzzlist;
 
 import com.buzzlist.base.BuzzListFragmentActivity;
 import com.buzzlist.fragments.BrowseItemsFragment;
+import com.buzzlist.fragments.PostItemFragment;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -15,7 +16,7 @@ public class PostItemActivity extends BuzzListFragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_item); 
         
-        BrowseItemsFragment frag = new BrowseItemsFragment();
+        PostItemFragment frag = new PostItemFragment();
     	frag.setArguments(getIntent().getExtras());
         
         if (savedInstanceState == null) {

@@ -301,7 +301,7 @@ int id always 0x7f05000b
 int id beginning 0x7f050011
 int id big_tile 0x7f050055
 int id big_tile_price 0x7f050056
-int id bottom_bar_layout 0x7f050087
+int id bottom_bar_layout 0x7f05009d
 int id browse_list_view 0x7f050045
 int id browse_search_text 0x7f050044
 int id button1 0x7f050085
@@ -388,14 +388,14 @@ int id pop_up_categories_button 0x7f050083
 int id pop_up_categories_button_layout 0x7f050082
 int id pop_up_sort_layout 0x7f05007e
 int id popup_fade 0x7f050084
-int id post_item_bottom_bar_layout 0x7f05009b
+int id post_item_bottom_bar_layout 0x7f050087
 int id post_item_description_title 0x7f050093
 int id post_item_item_description_edit_text 0x7f050094
 int id post_item_item_name_edit_text 0x7f05008e
 int id post_item_item_price_edit_text 0x7f050091
 int id post_item_item_price_title 0x7f05008f
-int id post_item_post_button 0x7f05009c
-int id post_item_post_cancel 0x7f05009d
+int id post_item_post_button 0x7f05009b
+int id post_item_post_cancel 0x7f05009c
 int id post_item_price_content 0x7f050090
 int id post_item_price_negotiable 0x7f050092
 int id post_item_tag_button 0x7f050099

@@ -29,6 +29,9 @@
         <activity android:name="com.buzzlist.BrowseItemsActivity"
             android:windowSoftInputMode="stateHidden" >
         </activity>
+        <activity android:name="com.buzzlist.PostItemActivity"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
         <activity android:name="com.buzzlist.ItemInformationActivity"
             android:windowSoftInputMode="stateHidden" >
         </activity>

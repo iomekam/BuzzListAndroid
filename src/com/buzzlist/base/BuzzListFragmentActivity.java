@@ -3,6 +3,7 @@ package com.buzzlist.base;
 import java.util.ArrayList;
 
 import com.buzzlist.BrowseItemsActivity;
+import com.buzzlist.PostItemActivity;
 import com.buzzlist.R;
 import com.buzzlist.globals.JsonFields;
 import com.buzzlist.models.BuzzListNameValuePair;
@@ -48,11 +49,8 @@ public class BuzzListFragmentActivity extends ActionBarActivity {
 		// Handle item selection
 		switch (item.getItemId()) {
 		case R.id.action_add:
-			PopupMenu popupMenu = new PopupMenu(this,
-					findViewById(R.id.action_search));
-
-
-			showPopup(findViewById(R.id.action_search));
+			Intent intent = new Intent(this, PostItemActivity.class);
+			startActivity(intent);
 
 			return true;
 		case R.id.action_profile:

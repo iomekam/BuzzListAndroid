@@ -1176,7 +1176,7 @@ containing a value of this type.
         public static final int beginning=0x7f050011;
         public static final int big_tile=0x7f050055;
         public static final int big_tile_price=0x7f050056;
-        public static final int bottom_bar_layout=0x7f050087;
+        public static final int bottom_bar_layout=0x7f05009d;
         public static final int browse_list_view=0x7f050045;
         public static final int browse_search_text=0x7f050044;
         public static final int button1=0x7f050085;
@@ -1263,14 +1263,14 @@ containing a value of this type.
         public static final int pop_up_categories_button_layout=0x7f050082;
         public static final int pop_up_sort_layout=0x7f05007e;
         public static final int popup_fade=0x7f050084;
-        public static final int post_item_bottom_bar_layout=0x7f05009b;
+        public static final int post_item_bottom_bar_layout=0x7f050087;
         public static final int post_item_description_title=0x7f050093;
         public static final int post_item_item_description_edit_text=0x7f050094;
         public static final int post_item_item_name_edit_text=0x7f05008e;
         public static final int post_item_item_price_edit_text=0x7f050091;
         public static final int post_item_item_price_title=0x7f05008f;
-        public static final int post_item_post_button=0x7f05009c;
-        public static final int post_item_post_cancel=0x7f05009d;
+        public static final int post_item_post_button=0x7f05009b;
+        public static final int post_item_post_cancel=0x7f05009c;
         public static final int post_item_price_content=0x7f050090;
         public static final int post_item_price_negotiable=0x7f050092;
         public static final int post_item_tag_button=0x7f050099;
