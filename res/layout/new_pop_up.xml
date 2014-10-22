@@ -202,7 +202,7 @@
     android:layout_toLeftOf="@+id/line_view"
     android:textOn="Yes"
     android:textOff="No"
-    android:onClick="onToggleClicked"/>
+    />
     <ToggleButton 
     android:id="@+id/toggle_image"
     android:layout_width="wrap_content"
@@ -212,7 +212,7 @@
     android:layout_toLeftOf="@+id/line_view"
     android:textOn="Yes"
     android:textOff="No"
-    android:onClick="onToggleClicked"/>
+    />
     <ToggleButton 
     android:id="@+id/toggle_negotiable"
     android:layout_width="wrap_content"
@@ -222,7 +222,7 @@
     android:layout_toLeftOf="@+id/line_view"
     android:textOn="Yes"
     android:textOff="No"
-    android:onClick="onToggleClicked"/>
+    />
     <ToggleButton 
     android:id="@+id/toggle_tags"
     android:layout_width="wrap_content"
@@ -232,7 +232,7 @@
     android:layout_toLeftOf="@+id/line_view"
     android:textOn="Yes"
     android:textOff="No"
-    android:onClick="onToggleClicked"/>
+    />
     
 
 </RelativeLayout>
