@@ -391,14 +391,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int itemPadding=0x7f010037;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int leftText=0x7f01006e;
         /**  Drawable used as a background for selected list items. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -468,14 +460,6 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int logo=0x7f01002d;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int middleText=0x7f01006f;
         /**  The type of navigation to use. 
          <p>Must be one of the following constant values.</p>
 <table>
@@ -569,14 +553,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int queryHint=0x7f01005b;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int rightText=0x7f010070;
         /**  SearchView dropdown background 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -776,10 +752,6 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int titleTextStyle=0x7f01002a;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int values=0x7f010071;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1123,38 +1095,34 @@ containing a value of this type.
         public static final int btn_cab_done_default_buzzlist=0x7f02005f;
         public static final int btn_cab_done_focused_buzzlist=0x7f020060;
         public static final int btn_cab_done_pressed_buzzlist=0x7f020061;
-        public static final int button_not_pressed=0x7f020062;
-        public static final int button_pressed=0x7f020063;
-        public static final int button_section_shape=0x7f020064;
-        public static final int button_states=0x7f020065;
-        public static final int buzzlist_logo=0x7f020066;
-        public static final int cab_background_bottom_buzzlist=0x7f020067;
-        public static final int cab_background_top_buzzlist=0x7f020068;
-        public static final int generic_item=0x7f020069;
-        public static final int ic_launcher=0x7f02006a;
-        public static final int list_focused_buzzlist=0x7f02006b;
-        public static final int list_pressed_buzzlist=0x7f02006c;
-        public static final int menu_dropdown_panel_buzzlist=0x7f02006d;
-        public static final int progress_bg_buzzlist=0x7f02006e;
-        public static final int progress_horizontal_buzzlist=0x7f02006f;
-        public static final int progress_primary_buzzlist=0x7f020070;
-        public static final int progress_secondary_buzzlist=0x7f020071;
-        public static final int selectable_background_buzzlist=0x7f020072;
-        public static final int spinner_ab_default_buzzlist=0x7f020073;
-        public static final int spinner_ab_disabled_buzzlist=0x7f020074;
-        public static final int spinner_ab_focused_buzzlist=0x7f020075;
-        public static final int spinner_ab_pressed_buzzlist=0x7f020076;
-        public static final int spinner_background_ab_buzzlist=0x7f020077;
-        public static final int tab_indicator_ab_buzzlist=0x7f020078;
-        public static final int tab_selected_buzzlist=0x7f020079;
-        public static final int tab_selected_focused_buzzlist=0x7f02007a;
-        public static final int tab_selected_pressed_buzzlist=0x7f02007b;
-        public static final int tab_unselected_buzzlist=0x7f02007c;
-        public static final int tab_unselected_focused_buzzlist=0x7f02007d;
-        public static final int tab_unselected_pressed_buzzlist=0x7f02007e;
+        public static final int buzzlist_logo=0x7f020062;
+        public static final int cab_background_bottom_buzzlist=0x7f020063;
+        public static final int cab_background_top_buzzlist=0x7f020064;
+        public static final int generic_item=0x7f020065;
+        public static final int ic_launcher=0x7f020066;
+        public static final int list_focused_buzzlist=0x7f020067;
+        public static final int list_pressed_buzzlist=0x7f020068;
+        public static final int menu_dropdown_panel_buzzlist=0x7f020069;
+        public static final int progress_bg_buzzlist=0x7f02006a;
+        public static final int progress_horizontal_buzzlist=0x7f02006b;
+        public static final int progress_primary_buzzlist=0x7f02006c;
+        public static final int progress_secondary_buzzlist=0x7f02006d;
+        public static final int selectable_background_buzzlist=0x7f02006e;
+        public static final int spinner_ab_default_buzzlist=0x7f02006f;
+        public static final int spinner_ab_disabled_buzzlist=0x7f020070;
+        public static final int spinner_ab_focused_buzzlist=0x7f020071;
+        public static final int spinner_ab_pressed_buzzlist=0x7f020072;
+        public static final int spinner_background_ab_buzzlist=0x7f020073;
+        public static final int tab_indicator_ab_buzzlist=0x7f020074;
+        public static final int tab_selected_buzzlist=0x7f020075;
+        public static final int tab_selected_focused_buzzlist=0x7f020076;
+        public static final int tab_selected_pressed_buzzlist=0x7f020077;
+        public static final int tab_unselected_buzzlist=0x7f020078;
+        public static final int tab_unselected_focused_buzzlist=0x7f020079;
+        public static final int tab_unselected_pressed_buzzlist=0x7f02007a;
     }
     public static final class id {
-        public static final int action_add=0x7f0500ad;
+        public static final int action_add=0x7f0500ac;
         public static final int action_bar=0x7f05001c;
         public static final int action_bar_activity_content=0x7f050015;
         public static final int action_bar_container=0x7f05001b;
@@ -1166,9 +1134,9 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_profile=0x7f0500ae;
-        public static final int action_search=0x7f0500af;
-        public static final int action_settings=0x7f0500ac;
+        public static final int action_profile=0x7f0500ad;
+        public static final int action_search=0x7f0500ae;
+        public static final int action_settings=0x7f0500ab;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int add_image_button=0x7f050089;
         public static final int add_image_layout=0x7f050088;
@@ -1249,7 +1217,6 @@ containing a value of this type.
         public static final int medium_left_tile_price=0x7f050058;
         public static final int message_button=0x7f0500a5;
         public static final int middle=0x7f050012;
-        public static final int mstb_button_view=0x7f0500ab;
         public static final int negotiable_check=0x7f050076;
         public static final int negotiable_text=0x7f050072;
         public static final int never=0x7f050009;
@@ -1404,11 +1371,6 @@ containing a value of this type.
         public static final int row_item=0x7f03002c;
         public static final int support_simple_spinner_dropdown_item=0x7f03002d;
         public static final int test=0x7f03002e;
-        public static final int view_center_toggle_button=0x7f03002f;
-        public static final int view_left_toggle_button=0x7f030030;
-        public static final int view_multi_state_toggle_button=0x7f030031;
-        public static final int view_right_toggle_button=0x7f030032;
-        public static final int view_single_toggle_button=0x7f030033;
     }
     public static final class menu {
         public static final int auth=0x7f0d0000;
@@ -1485,31 +1447,11 @@ containing a value of this type.
         public static final int title_activity_main=0x7f0a0019;
     }
     public static final class style {
-        public static final int ActionBar_Solid_Buzzlist=0x7f0b0090;
-        public static final int ActionBar_Transparent_Buzzlist=0x7f0b0091;
-        public static final int ActionBarTabStyle_Buzzlist=0x7f0b0094;
-        public static final int ActionButton_CloseMode_Buzzlist=0x7f0b0097;
+        public static final int ActionBar_Solid_Buzzlist=0x7f0b008e;
+        public static final int ActionBar_Transparent_Buzzlist=0x7f0b008f;
+        public static final int ActionBarTabStyle_Buzzlist=0x7f0b0092;
+        public static final int ActionButton_CloseMode_Buzzlist=0x7f0b0095;
         /** 
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
-
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     
@@ -1533,15 +1475,12 @@ containing a value of this type.
         public static final int AppBaseTheme=0x7f0b008b;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
- Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0b008c;
-        public static final int BlackNormalText=0x7f0b008e;
-        public static final int DropDownListView_Buzzlist=0x7f0b0093;
-        public static final int DropDownNav_Buzzlist=0x7f0b0095;
-        public static final int PopupMenu_Buzzlist=0x7f0b0092;
-        public static final int ProgressBar_Buzzlist=0x7f0b0096;
+        public static final int DropDownListView_Buzzlist=0x7f0b0091;
+        public static final int DropDownNav_Buzzlist=0x7f0b0093;
+        public static final int PopupMenu_Buzzlist=0x7f0b0090;
+        public static final int ProgressBar_Buzzlist=0x7f0b0094;
         /**  Mimic text appearance in select_dialog_item.xml 
          */
         public static final int TextAppearance_AppCompat_Base_CompactMenu_Dialog=0x7f0b0063;
@@ -1650,11 +1589,10 @@ containing a value of this type.
         /**  Base platform-dependent theme providing a light-themed activity. 
          */
         public static final int Theme_Base_Light=0x7f0b007f;
-        public static final int Theme_Buzzlist=0x7f0b008f;
+        public static final int Theme_Buzzlist=0x7f0b008d;
         /**  this style is only referenced in a Light.DarkActionBar based theme 
          */
-        public static final int Theme_Buzzlist_Widget=0x7f0b0098;
-        public static final int WhiteBoldText=0x7f0b008d;
+        public static final int Theme_Buzzlist_Widget=0x7f0b0096;
         /**  Styles in here can be extended for customisation in your application. Each utilises
          one of the Base styles. If Holo themes are available on the current platform version
          they will be used instead of the compat styles. 
@@ -2970,29 +2908,6 @@ containing a value of this type.
           @attr name android:windowAnimationStyle
         */
         public static final int MenuView_android_windowAnimationStyle = 0;
-        /** Attributes that can be used with a MultiStateToggleButton.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MultiStateToggleButton_values com.buzzlist:values}</code></td><td></td></tr>
-           </table>
-           @see #MultiStateToggleButton_values
-         */
-        public static final int[] MultiStateToggleButton = {
-            0x7f010071
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.buzzlist.R.attr#values}
-          attribute's value can be found in the {@link #MultiStateToggleButton} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.buzzlist:values
-        */
-        public static final int MultiStateToggleButton_values = 0;
         /** Attributes that can be used with a SearchView.
            <p>Includes the following attributes:</p>
            <table>
@@ -3339,65 +3254,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name com.buzzlist:popupMenuStyle
         */
         public static final int Theme_popupMenuStyle = 2;
-        /** Attributes that can be used with a ThreeStateToggleButton.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ThreeStateToggleButton_leftText com.buzzlist:leftText}</code></td><td></td></tr>
-           <tr><td><code>{@link #ThreeStateToggleButton_middleText com.buzzlist:middleText}</code></td><td></td></tr>
-           <tr><td><code>{@link #ThreeStateToggleButton_rightText com.buzzlist:rightText}</code></td><td></td></tr>
-           </table>
-           @see #ThreeStateToggleButton_leftText
-           @see #ThreeStateToggleButton_middleText
-           @see #ThreeStateToggleButton_rightText
-         */
-        public static final int[] ThreeStateToggleButton = {
-            0x7f01006e, 0x7f01006f, 0x7f010070
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.buzzlist.R.attr#leftText}
-          attribute's value can be found in the {@link #ThreeStateToggleButton} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.buzzlist:leftText
-        */
-        public static final int ThreeStateToggleButton_leftText = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.buzzlist.R.attr#middleText}
-          attribute's value can be found in the {@link #ThreeStateToggleButton} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.buzzlist:middleText
-        */
-        public static final int ThreeStateToggleButton_middleText = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.buzzlist.R.attr#rightText}
-          attribute's value can be found in the {@link #ThreeStateToggleButton} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.buzzlist:rightText
-        */
-        public static final int ThreeStateToggleButton_rightText = 2;
         /** Attributes that can be used with a View.
            <p>Includes the following attributes:</p>
            <table>
