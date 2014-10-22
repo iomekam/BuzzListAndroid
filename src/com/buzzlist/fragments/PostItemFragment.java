@@ -84,8 +84,19 @@ public class PostItemFragment extends Fragment {
 						|| item_description.getEditableText().toString().length()==0){
 					Toast.makeText(getActivity(), "One or more required fields are empty", Toast.LENGTH_SHORT).show();
 				}
-				else{
+				else
+				{
+					final String url = Routing.SERVER_URL + Routing.ITEM;
 					
+					List<NameValuePair> params = new ArrayList<NameValuePair>();
+					params.add(new BasicNameValuePair("name", itemName.getText().toString()));
+					params.add(new BasicNameValuePair("price", itemPrice.getText().toString()));
+					params.add(new BasicNameValuePair("description", item_description.getText().toString()));
+					params.add(new BasicNameValuePair("image_path", ""));
+					params.add(new BasicNameValuePair("categories_id", "0"));
+					
+					HttpTaskPost task = new HttpTaskPost();
+					task.execute(url, params);
 				}
 			}
 		});
@@ -139,18 +150,42 @@ public class PostItemFragment extends Fragment {
 			}
 		});
 		
-		
-
-		//for (BuzzListNameValuePair pair : params) {
-		//	getParams.add(pair);
-		//}
 
 		
-
-		final String url = Routing.SERVER_URL + Routing.SEARCH;
-
-
+		
 		return view;
+	}
+	
+	private class HttpTaskPost extends AsyncTask<Object, String, String>
+	{
+		@Override
+		protected String doInBackground(Object... params) {
+			return HttpManager.getContent((String)params[0], Request.POST, (List<NameValuePair>)params[1]);
+		}	
+		
+		@Override
+		protected void onPostExecute(String result) 
+		{
+			try {
+				JSONObject obj = new JSONObject(result);
+				boolean error = obj.getBoolean(JsonFields.ERROR);
+				
+				JSONArray arr = obj.getJSONArray(JsonFields.Item.ITEMS_ARRAY);
+				
+				if(!error)
+				{	
+					for(int count = 0; count < arr.length(); count++)
+					{
+						Item item = Item.decodeJSON(arr.getJSONObject(count));
+						items.add(item);
+					}
+					
+					adapter = new ItemAdapter(getActivity(), R.layout.list_row_item, items);
+					listView.setAdapter(adapter);
+				}
+			} 
+			catch (JSONException e) {}
+		}
 	}
 
 	
