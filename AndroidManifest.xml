@@ -26,16 +26,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.buzzlist.BrowseItemsActivity" >
+        <activity android:name="com.buzzlist.BrowseItemsActivity"
+            android:windowSoftInputMode="stateHidden" >
         </activity>
-        <activity android:name="com.buzzlist.ItemInformationActivity" >
+        <activity android:name="com.buzzlist.ItemInformationActivity"
+            android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name="com.buzzlist.HomeActivity"
+            android:windowSoftInputMode="stateHidden"
             android:label="Home" >
         </activity>
         <activity
             android:name="com.buzzlist.AuthActivity"
+            android:windowSoftInputMode="stateHidden"
             android:label="@string/title_activity_auth" >
             
             <intent-filter>

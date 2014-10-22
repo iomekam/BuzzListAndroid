@@ -37,7 +37,7 @@ public class ItemInformationFragment extends Fragment
 		}
 		
 		name.setText(item.getName());
-	    decrip.setText(item.getDescription());
+	    decrip.setText("Rooms oh fully taken by worse do. Points afraid but may end law lasted. Was out laughter raptures returned outweigh. Luckily cheered colonel me do we attacks on highest enabled. Tried law yet style child. Bore of true of no be deal. Frequently sufficient in be unaffected. The furnished she concluded depending procuring concealed. ");//item.getDescription());
 	    price.setText("" + item.getPrice());
 	    date.setText(item.getCreatedAt().toString());
 	    tagList.setText(tags);

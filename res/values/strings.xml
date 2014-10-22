@@ -27,5 +27,9 @@
     <string name="menu_add">Add an item</string>
     <string name="menu_profile">View profile</string>
     <string name="title_activity_auth">AuthActivity</string>
+    <string-array name="toggle_switches">
+        <item >Yes</item>
+        <item >No</item>
+    </string-array>
 
 </resources>

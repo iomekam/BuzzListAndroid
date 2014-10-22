@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar_layout" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <android.support.v4.view.ViewPager
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip" />
+
+                <LinearLayout
+                    android:id="@+id/add_image_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pager" >
+
+                    <Button
+                        android:id="@+id/add_image_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Add an Image" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/image_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/pager"
+                    android:layout_alignLeft="@+id/pager" >
+
+                    <TextView
+                        android:id="@+id/view_pager_text_shadow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="#80000000" />
+
+                    <TextView
+                        android:id="@+id/view_pager_text_shadow_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:text="page_numbers"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Item Name"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <EditText
+                    android:id="@+id/post_item_item_name_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/item_title"
+                    android:layout_below="@+id/item_title"
+                    android:layout_marginRight="3dp" />
+
+                <TextView
+                    android:id="@+id/post_item_item_price_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/item_title"
+                    android:layout_below="@+id/post_item_item_name_edit_text"
+                    android:layout_marginTop="20dp"
+                    android:text="Item Price"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <LinearLayout
+                    android:id="@+id/post_item_price_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/post_item_item_price_title"
+                    android:layout_alignRight="@+id/post_item_item_name_edit_text"
+                    android:layout_below="@+id/post_item_item_price_title"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <EditText
+                        android:id="@+id/post_item_item_price_edit_text"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4" />
+
+                    <CheckBox
+                        android:id="@+id/post_item_price_negotiable"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:text="Price Negotiable?" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/post_item_description_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/post_item_price_content"
+                    android:layout_below="@+id/post_item_price_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Item Description"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <EditText
+                    android:id="@+id/post_item_item_description_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/post_item_description_title"
+                    android:layout_below="@+id/post_item_description_title"
+                    android:layout_marginRight="3dp" />
+
+                <TextView
+                    android:id="@+id/post_item_tags_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/post_item_item_description_edit_text"
+                    android:layout_below="@+id/post_item_item_description_edit_text"
+                    android:layout_marginTop="20dp"
+                    android:text="Item Tags"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/post_item_tags_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/post_item_tags_title"
+                    android:layout_below="@+id/post_item_tags_title"
+                    android:layout_marginTop="3dp"
+                    android:text="Add tags to improve search efficiency. Please doo not spam"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <LinearLayout
+                    android:id="@+id/post_item_tags_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/post_item_tags_hint"
+                    android:layout_below="@+id/post_item_tags_hint"
+                    android:layout_marginRight="3dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <EditText
+                        android:id="@+id/post_item_tag_edit_text"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7" />
+
+                    <Button
+                        android:id="@+id/post_item_tag_button"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:text="Add Tag" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/post_item_tag_populator_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/post_item_bottom_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <Button
+            android:id="@+id/post_item_post_button"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:background="#00ff00"
+            android:text="Post Item"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/post_item_post_cancel"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:background="#ff0000"
+            android:text="Cancel" />
+    </LinearLayout>
+
+</RelativeLayout>
